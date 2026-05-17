@@ -1,7 +1,16 @@
 #pragma once
 #include "Contact.h"
-class Friend :
-    public Contact
-{
-};
+#include <string>
 
+class Friend : public Contact {
+private:
+    string surname;
+    string address;
+    string phone;
+    string birthDate;
+
+public:
+    Friend(string s, string a, string p, string b);
+
+    void show() const override;
+};
